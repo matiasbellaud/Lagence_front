@@ -1,3 +1,5 @@
+import "./Login.css";
+
 const Login = () => {
   // function ApiGet() {
   //     fetch('http://127.0.0.1:8000/api/films')
@@ -5,16 +7,20 @@ const Login = () => {
   //         .then((data) => console.log(data));
   // }
   return (
-    <div className="login">
-      <form className="login-form">
-        <label htmlFor="email">Email</label>
-        <input type="email" id="email" />
-        <label htmlFor="password">Password</label>
-        <input type="password" id="password" />
-        <a href="/">inscription</a>
-        {<button /* onClick= {ApiGet()}*/ type="submit">Login</button>}
-      </form>
-    </div>
+    <main>
+      <div className="triangleLeft"></div>
+      <div className="triangleRight"></div>
+      <div className="login">
+        <h2 className="title">Login</h2>
+        <form className="form-login">
+          <input type="email" name="email" placeholder="Email" />
+          <input type="password" name="password" placeholder="Mot de passe" />
+          <button className="btn-submit" type="submit" /*onClick={formData}*/>
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </main>
   );
 };
 
