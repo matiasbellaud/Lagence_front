@@ -1,4 +1,5 @@
 import "./Login.css";
+import { Outlet, Link } from "react-router-dom";
 
 const Login = () => {
   // function ApiGet() {
@@ -15,11 +16,17 @@ const Login = () => {
         <form className="form-login">
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Mot de passe" />
-          <button className="btn-submit" type="submit" /*onClick={formData}*/>
-            Envoyer
-          </button>
+          <Link to="/explorer">
+            <button className="btn-submit" type="submit" /*onClick={formData}*/>
+              Envoyer
+            </button>
+          </Link>
+          <Link className="btn-submit" to="/register">
+            Créer un compte
+          </Link>
         </form>
       </div>
+      <Outlet />
     </main>
   );
 };

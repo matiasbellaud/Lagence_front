@@ -1,4 +1,5 @@
 import "./Nav.css";
+import { Outlet, Link } from "react-router-dom";
 
 function Nav() {
   return (
@@ -10,12 +11,16 @@ function Nav() {
         name="Nom"
         placeholder="Recherche"
       />
+      {/* <Link className="btn-nav" to="/create">
+        Créer
+      </Link> */}
       <a className="btn-nav" href="/">
         Créer
       </a>
-      <a className="btn-nav" href="/">
+      <Link className="btn-nav" to="/">
         Déconnexion
-      </a>
+      </Link>
+      <Outlet />
     </div>
   );
 }

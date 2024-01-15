@@ -1,4 +1,5 @@
 import "./Register.css";
+import { Outlet, Link } from "react-router-dom";
 
 const Register = () => {
   function formData() {
@@ -20,11 +21,14 @@ const Register = () => {
           <input type="text" name="Prenom" placeholder="Prénom" />
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Mot de passe" />
-          <button className="btn-submit" type="submit" onClick={formData}>
-            Envoyer
-          </button>
+          <Link to="/explorer">
+            <button className="btn-submit" type="submit" /*onClick={formData}*/>
+              Envoyer
+            </button>
+          </Link>
         </form>
       </div>
+      <Outlet />
     </main>
   );
 };
