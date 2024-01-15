@@ -46,6 +46,6 @@
   font-size: 2rem;
   font-weight: 600;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
   transform: skew(-20deg);
 }

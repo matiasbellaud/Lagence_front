@@ -64,7 +64,7 @@ main {
   font-weight: bold;
 
   transform: skew(-20deg);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .form-register {
@@ -105,6 +105,6 @@ main {
   font-size: 1.125rem;
   font-weight: 700;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 10px;
   transform: skew(-20deg);
 }

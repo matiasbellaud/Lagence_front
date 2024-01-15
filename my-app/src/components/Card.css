@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.Card {
+  width: 25rem;
+  height: 37.5rem;
+  background-color: #aba0f9;
+  box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Card:hover {
+  border: #3e3e3e solid 5px;
+}
+
+.title-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18.75rem;
+  height: 3.75rem;
+  border: none;
+  outline: none;
+  background-color: #3e3e3e;
+  color: #fefefe;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  transform: skew(-20deg);
+}
+
+.team {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3e3e3e;
+}
+
+.card-content-1,
+.card-content-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 21.875rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.card-content-1 {
+  height: 9.375rem;
+  font-weight: 700;
+  background-color: #fefefe;
+  color: #3e3e3e;
+}
+.card-content-2 {
+  height: 17.5rem;
+  background-color: #3e3e3e;
+  color: #fefefe;
+  font-weight: 600;
+}
+
+.card-content-1 .sexe,
+.card-content-1 .hair,
+.card-content-1 .planet,
+.card-content-1 .city,
+.card-content-2 .powers,
+.card-content-2 .gadgets,
+.card-content-2 .superpower,
+.card-content-2 .vehicle {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
