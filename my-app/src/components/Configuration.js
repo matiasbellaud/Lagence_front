@@ -1,6 +1,21 @@
 import "./Configuration.css";
+import {  useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+
 
 const Configuration = () => {
+
+    const [cookies] = useCookies(["idUser"]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      if (cookies.idUser == null) {
+        navigate("/login");
+        return;
+      }
+    },[]);
+
     return (
         <main>
             <div className="triangleLeft"></div>

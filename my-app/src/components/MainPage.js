@@ -2,18 +2,27 @@ import "./MainPage.css";
 import Nav from "./Nav";
 import Card from "./Card";
 import React, { useState, useEffect } from "react";
+import {useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
-//import { useCookies } from "react-cookie";
 
 function MainPage() {
-  // const [cookies] = useCookies(["idUser"]);
+
   const [heros, setHero] = useState([]);
+  const [cookies] = useCookies(["idUser"]);
+  const navigate = useNavigate();
+
 
   const bodyParameters = {
-    idUser: 1, //cookies.idUser,
+    idUser: cookies.idUser,
   };
 
   useEffect(() => {
+    if (cookies.idUser == null) {
+      navigate("/login");
+      return;
+    }
+
     axios
       .post("http://localhost:8000/api/post/getHeroesByUser", bodyParameters)
       .then((response) => {
@@ -29,7 +38,7 @@ function MainPage() {
       <Nav />
       <section className="cards">
         {heros.length == 0 ? (
-          <p className="">Aucun évènements</p>
+          <p className="">Aucun super-héro dans votre agence ...</p>
         ) : (
           heros.map((hero) => <Card info={hero} />)
         )}

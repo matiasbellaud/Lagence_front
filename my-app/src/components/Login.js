@@ -1,32 +1,45 @@
 import "./Login.css";
-import { Outlet, Link } from "react-router-dom";
+import {useNavigate, Link  } from "react-router-dom";
+import { useCookies } from "react-cookie";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Login = () => {
-  // function ApiGet() {
-  //     fetch('http://127.0.0.1:8000/api/films')
-  //         .then((response) => response.json())
-  //         .then((data) => console.log(data));
-  // }
+  const navigate = useNavigate();
+  const [cookies, setCookie] = useCookies(["idUser"]);
+
+  const LoginAccount = async (e) => {
+    e.preventDefault();
+    await axios.post("http://localhost:8000/api/post/login", {email: e.target.email.value, password: e.target.password.value})
+      .then((res) => {
+        console.log(res.data)
+        if (res.data != -1){
+          setCookie("idUser", res.data, { path: "/" });
+          navigate("/");
+          return
+        }
+        navigate("/login");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+
   return (
     <main>
       <div className="triangleLeft"></div>
       <div className="triangleRight"></div>
       <div className="login">
         <h2 className="title">Login</h2>
-        <form className="form-login">
+        <form className="form-login" onSubmit={LoginAccount}>
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Mot de passe" />
-          <Link to="/explorer">
-            <button className="btn-submit" type="submit" /*onClick={formData}*/>
-              Envoyer
-            </button>
-          </Link>
-          <Link className="btn-submit" to="/register">
-            Créer un compte
-          </Link>
+
+          <button className="btn-submit" type="submit">Envoyer</button>
+
+          <Link className="btn-submit" to="/register">Créer un compte</Link>
         </form>
       </div>
-      <Outlet />
     </main>
   );
 };
