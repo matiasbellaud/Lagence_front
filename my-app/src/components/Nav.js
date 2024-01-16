@@ -14,9 +14,6 @@ function Nav() {
       <Link className="btn-nav" to="/configuration">
         Créer
       </Link>
-      <a className="btn-nav" href="/">
-        Créer
-      </a>
       <Link className="btn-nav" to="/">
         Déconnexion
       </Link>
