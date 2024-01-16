@@ -47,7 +47,9 @@ function Card() {
             <span>{gadget}</span>
           ))}
         </p>
-        <p className="vehicle">Véhicule : {hero.vehicle}</p>
+        {hero.vehicle != null && (
+          <p className="vehicle">Véhicule : {hero.vehicle}</p>
+        )}
       </div>
     </div>
   );
