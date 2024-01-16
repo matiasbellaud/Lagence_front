@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 function Nav() {
   return (
     <div className="Nav">
-      <h2 className="title-nav">Logo</h2>
+      <h2 className="title-nav">L'AGENCE</h2>
       <input
         className="btn-nav"
         type="text"
