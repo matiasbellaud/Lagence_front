@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-around;
   box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
-  width: 112.5rem;
+  width: 94.587vw;
   height: 9.375rem;
   border-radius: 20px;
   margin-top: 2.5rem;
@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 21.875rem;
+  width: 18.392vw;
   height: 100%;
   border: none;
   outline: none;
@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18.75rem;
+  width: 15.765vw;
   height: 3.75rem;
   border: none;
   outline: none;
