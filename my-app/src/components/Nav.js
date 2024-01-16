@@ -11,9 +11,9 @@ function Nav() {
         name="Nom"
         placeholder="Recherche"
       />
-      {/* <Link className="btn-nav" to="/create">
+      <Link className="btn-nav" to="/configuration">
         Créer
-      </Link> */}
+      </Link>
       <a className="btn-nav" href="/">
         Créer
       </a>
