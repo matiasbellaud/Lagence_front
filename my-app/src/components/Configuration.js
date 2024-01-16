@@ -10,11 +10,11 @@ const Configuration = () => {
                 <form className="form-configuration">
                     <input type="text" name="nom" placeholder="nom" />
                     <input type="text" name="sexe" placeholder="sexe" />
-                    <input type="text" name="couleur de cheveux" placeholder="couleur de cheveux" />
+                    <input type="text" name="couleurDeCheveux" placeholder="couleur de cheveux" />
                     <input type="text" name="planet" placeholder="planet" />
                     <input type="text" name="ville" placeholder="ville" />
+                    <input type="text" name="city2" placeholder="ville 2" />
                     <input type="text" name="équipe" placeholder="équipe" />
-                    <input type="text" name="super pouvoir" placeholder="super pouvoir" />
                     <input type="text" name="vehicule" placeholder="vehicule" />
                     <button className="btn-submit" type="submit" /*onClick={formData}*/>
                             Envoyer
