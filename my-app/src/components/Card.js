@@ -1,58 +1,50 @@
 import "./Card.css";
 
-function Card() {
-  const [hero, setHero] = useState([]);
-
-  const bodyParameters = {
-    idUser: cookies.idUser,
-  };
-
-  useEffect(() => {
-    console.log(cookies.idUser);
-    axios
-      .post("http://localhost:3001/api/clubs/getOneById", bodyParameters)
-      .then((response) => {
-        setHero(response.data["hero"]);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, []);
-
+const Card = (hero) => {
   return (
     <div className="Card">
-      <h2 className="title-card">{hero.name}</h2>
-      <h4 className="team">Team : {hero.team}</h4>
+      <h2 className="title-card">{hero.info.name}</h2>
+      {
+        <h4 className="team">
+          Team :
+          {hero.info.teams &&
+            hero.info.teams.map((team, index) => (
+              <span key={index}> {team}</span>
+            ))}
+        </h4>
+      }
       <div className="card-content-1">
-        <p className="sexe">Sexe : {hero.sexe}</p>
-        <p className="hair">Cheveux : {hero.hairColor}</p>
-        <p className="planet">Planet : {hero.planet}</p>
-        <p className="city">
-          Ville(s) :
-          {hero.city.map((event) => (
-            <span>{event}</span>
-          ))}
-        </p>
+        <p className="description">Description : {hero.info.description}</p>
+        <p className="sexe">Sexe : {hero.info.gender}</p>
+        <p className="hair">Cheveux : {hero.info.hairColor}</p>
+        <p className="planet">Planet : {hero.info.idHomePlanet}</p>
       </div>
       <div className="card-content-2">
+        <p className="city">
+          Ville(s) :
+          {hero.info.cities &&
+            hero.info.cities.map((city, index) => (
+              <span key={index}>- {city}</span>
+            ))}
+        </p>
         <p className="powers">
           Powers :
-          {hero.powers.map((power) => (
-            <span>{power}</span>
-          ))}
+          {hero.info.powers &&
+            hero.info.powers.map((power, index) => (
+              <span key={index}>- {power}</span>
+            ))}
         </p>
         <p className="gadgets">
           Gadgets :
-          {hero.gadgets.map((gadget) => (
-            <span>{gadget}</span>
-          ))}
+          {hero.info.gadgets &&
+            hero.info.gadgets.map((gadget, index) => (
+              <span key={index}>- {gadget}</span>
+            ))}
         </p>
-        {hero.vehicle != null && (
-          <p className="vehicle">Véhicule : {hero.vehicle}</p>
-        )}
+        <p className="vehicle">Véhicule : {hero.info.idVehicle}</p>
       </div>
     </div>
   );
-}
+};
 
 export default Card;

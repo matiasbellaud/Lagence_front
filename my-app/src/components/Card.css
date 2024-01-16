@@ -69,15 +69,25 @@
   font-weight: 600;
 }
 
+.card-content-1 .description,
 .card-content-1 .sexe,
 .card-content-1 .hair,
 .card-content-1 .planet,
-.card-content-1 .city,
+.card-content-2 .city,
 .card-content-2 .powers,
 .card-content-2 .gadgets,
 .card-content-2 .superpower,
 .card-content-2 .vehicle {
   display: flex;
   flex-direction: column;
+  padding-left: 1rem;
+}
+
+.card-content-2 .city span,
+.card-content-2 .powers span,
+.card-content-2 .gadgets span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
   padding-left: 1rem;
 }
