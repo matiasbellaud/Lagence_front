@@ -121,6 +121,7 @@ main {
     position: absolute;
     left: 5vh;
     top: 30vh;
+    margin-left: -30vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,16 +143,16 @@ main {
     justify-content: center;
 }
 
-.form-pouvoir {
+/* .form-pouvoir {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     width: 90%;
     height: 30vh;
-}
+} */
 
-.form-pouvoir input {
+.pouvoir input {
     width: 15vw;
     height: 6vh;
     border: 1px solid #ccc;
@@ -176,6 +177,7 @@ main {
     position: absolute;
     right: 5vh;
     top: 30vh;
+    margin-right: -30vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,16 +199,16 @@ main {
     justify-content: center;
 }
 
-.form-gadget {
+/* .form-gadget {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     width: 90%;
     height: 30vh;
-}
+} */
 
-.form-gadget input {
+.gadget input {
     width: 15vw;
     height: 6vh;
     border: 1px solid #ccc;
