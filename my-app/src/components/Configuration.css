@@ -36,15 +36,184 @@ main {
 }
 
 .configuration {
-    width: 43.75rem;
-    height: 43.75rem;
+    width: 36.784vw;
+    height: 95vh;
     background-color: #aba0f9;
     box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    gap: 2.5rem;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 21vw;
+    height: 10vh;
+
+    color: #fefefe;
+    background-color: #3e3e3e;
+
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-weight: bold;
+
+    transform: skew(-20deg);
+    border-radius: 10px;
+}
+
+.form-configuration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 76vh;
+}
+
+.form-configuration input {
+    width: 31.529vw;
+    height: 6vh;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    color: #3e3e3e;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.form-configuration input::placeholder {
+    color: #3e3e3e;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.form-configuration .btn-submit {
+    width: 15.765vw;
+    height: 6vh;
+    border: none;
+    outline: none;
+    background-color: #3e3e3e;
+    color: #fefefe;
+    font-size: 1.125rem;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 10px;
+    transform: skew(-20deg);
+}
+
+.pouvoir {
+    width: 24vw;
+    height: 45vh;
+    background-color: #aba0f9;
+    border-radius: 10px;
+    outline: none;
+    color: #3e3e3e;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    position: absolute;
+    left: 5vh;
+    top: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pouvoir .title-pouvoir {
+    width: 15vw;
+    height: 8vh;
+    color: #fefefe;
+    background-color: #3e3e3e;
+    font-size: 2.0rem;
+    font-weight: 700;
+    font-weight: bold;
+    transform: skew(-20deg);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-pouvoir {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 30vh;
+}
+
+.form-pouvoir input {
+    width: 15vw;
+    height: 6vh;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    color: #3e3e3e;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+.gadget {
+    width: 24vw;
+    height: 45vh;
+    background-color: #aba0f9;
+    border-radius: 10px;
+    outline: none;
+    color: #3e3e3e;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding-left: 1rem;
+    position: absolute;
+    right: 5vh;
+    top: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gadget .title-gadget {
+    width: 15vw;
+    height: 8vh;
+    color: #fefefe;
+    background-color: #3e3e3e;
+    font-size: 2.0rem;
+    font-weight: 700;
+    font-weight: bold;
+    transform: skew(-20deg);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-gadget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 30vh;
+}
+
+.form-gadget input {
+    width: 15vw;
+    height: 6vh;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    color: #3e3e3e;
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding-left: 1rem;
 }
