@@ -1,9 +1,9 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainPage from "./components/MainPage";
-import Register from "./components/Register";
-import Login from "./components/Login";
-import Configuration from "./components/Configuration";
+import MainPage from "./components/MainPage/MainPage";
+import Register from "./components/Register/Register";
+import Login from "./components/Login/Login";
+import Configuration from "./components/HeroConfiguration/Configuration";
 export default function App() {
   return (
     <BrowserRouter>
