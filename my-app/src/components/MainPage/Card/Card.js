@@ -10,7 +10,6 @@ const Card = (hero) => {
 
   const deleteHero = async (e) => {
     e.preventDefault();
-    console.log(hero.info.id);
     await axios
       .post("http://localhost:8000/api/post/deleteHeroById", {
         idUser: cookies.idUser,
@@ -26,9 +25,9 @@ const Card = (hero) => {
       });
   };
 
-  const turnCard = () => {
-    const cardElement = document.getElementById("Card");
-    const cardSuppElement = document.getElementById("CardSupp");
+  const turnCard = (id) => {
+    const cardElement = document.getElementById(`${id}`);
+    const cardSuppElement = document.getElementById(`Supp${id}`);
 
     if (cardElement && cardSuppElement) {
       if (cardElement.style.display === "flex") {
@@ -43,7 +42,11 @@ const Card = (hero) => {
 
   return (
     <>
-      <div className="Card" id="Card" onClick={turnCard}>
+      <div
+        className="Card"
+        id={`${hero.info.id}`}
+        onClick={() => turnCard(hero.info.id)}
+      >
         <h2 className="title-card">{hero.info.name}</h2>
         {
           <h4 className="team">
@@ -87,8 +90,8 @@ const Card = (hero) => {
       </div>
       <form
         className="CardSupp"
-        id="CardSupp"
-        onClick={turnCard}
+        id={`Supp${hero.info.id}`}
+        onClick={() => turnCard(hero.info.id)}
         onSubmit={deleteHero}
       >
         <button type="submit" className="title-card">
