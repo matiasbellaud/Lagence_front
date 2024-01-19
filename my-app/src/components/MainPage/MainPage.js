@@ -1,17 +1,15 @@
 import "./MainPage.css";
-import Nav from "./Nav";
-import Card from "./Card";
+import Nav from "./Nav/Nav";
+import Card from "./Card/Card";
 import React, { useState, useEffect } from "react";
-import {useCookies } from "react-cookie";
+import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function MainPage() {
-
   const [heros, setHero] = useState([]);
   const [cookies] = useCookies(["idUser"]);
   const navigate = useNavigate();
-
 
   const bodyParameters = {
     idUser: cookies.idUser,

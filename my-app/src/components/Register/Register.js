@@ -1,5 +1,5 @@
 import "./Register.css";
-import {useNavigate, Link  } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -8,15 +8,21 @@ const Register = () => {
 
   const RegisterAccount = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8000/api/post/register", {firstName: e.target.firstname.value, lastName: e.target.lastname.value, email: e.target.email.value, password: e.target.password.value})
+    await axios
+      .post("http://localhost:8000/api/post/register", {
+        firstName: e.target.firstname.value,
+        lastName: e.target.lastname.value,
+        email: e.target.email.value,
+        password: e.target.password.value,
+      })
       .then(() => {
         navigate("/login");
-        return
+        return;
       })
       .catch((err) => {
         console.log(err);
       });
-  }
+  };
 
   return (
     <main>
@@ -30,9 +36,13 @@ const Register = () => {
           <input type="email" name="email" placeholder="Email" />
           <input type="password" name="password" placeholder="Mot de passe" />
 
-          <button className="btn-submit" type="submit">Envoyer</button>
+          <button className="btn-submit" type="submit">
+            Envoyer
+          </button>
 
-          <Link className="btn-submit" to="/login">Se connecter</Link>
+          <Link className="btn-submit" to="/login">
+            Se connecter
+          </Link>
         </form>
       </div>
     </main>
