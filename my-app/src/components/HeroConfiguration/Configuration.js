@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Configuration.css";
+import arrow from "./return.png";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -54,9 +55,6 @@ const Configuration = () => {
       <div className="triangleLeft"></div>
       <div className="triangleRight"></div>
       <div className="configuration">
-        <Link to="/">
-          <button className="btn-submit">Home</button>
-        </Link>
         <h2 className="title">Configuration</h2>
         <form className="form-configuration" name="form1" onSubmit={createHero}>
           <input type="text" name="name" placeholder="nom" required />
@@ -84,9 +82,14 @@ const Configuration = () => {
           <input type="text" name="city2" placeholder="ville 2" />
           <input type="text" name="team" placeholder="équipe" required />
           <input type="text" name="vehicle" placeholder="vehicule" required />
-          <button className="btn-submit" type="submit">
-            Envoyer
-          </button>
+          <div className="btns">
+            <button className="btn-submit" type="submit">
+              Envoyer
+            </button>
+            <Link to="/">
+              <img className="btn-return" src={arrow} />
+            </Link>
+          </div>
 
           <div className="pouvoir">
             <h2 className="title-pouvoir">Pouvoir(s)</h2>
