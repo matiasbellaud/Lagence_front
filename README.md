@@ -4,11 +4,11 @@
 
 ## 📝 Description
 
-Ce projet est un site web qui permet de visualiser les super héros de l'agence SuperHero relier a une API. Il est possible de voir les détails d'un super héros, de les filtrer par nom et par équipe, et de les trier par nom, équipe, ou popularité.
+Ce projet est un site web qui permet de visualiser les super héros de l'agence Superhero relier à une API. Il est possible de voir les détails des super héros que l'on a créés, d'en ajouter et de les supprimer.
 
 ## 📦 Installation
 
-Pour installer le projet, il faut cloner le repository, puis installer les dépendances avec la commande `npm install`. Ensuite, il faut lancer le serveur avec la commande `npm start`.
+Pour installer le projet, il faut cloner le repository, puis installer les dépendances avec la commande `npm install`. Ensuite, faite `cd my-app` il faut lancer le serveur avec la commande `npm start`.
 
 ## 🖥️ Technologies
 
@@ -17,9 +17,9 @@ Pour installer le projet, il faut cloner le repository, puis installer les dépe
 
 ## 📚 Auteurs
 
-`Maxime fuzeau` => maxime.fuzeau@ynov.com
-`Matias Bellaud` => matias.bellaud@ynov.com
-`Le Bourhis Evan` => evan.lebourhis@ynov.com
+- `Maxime fuzeau` => maxime.fuzeau@ynov.com
+- `Matias Bellaud` => matias.bellaud@ynov.com
+- `Le Bourhis Evan` => evan.lebourhis@ynov.com
 
 ## ✨ liste des fonctionnalités
 
