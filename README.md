@@ -9,7 +9,10 @@ Ce projet est un site web qui permet de visualiser les super héros de l'agence 
 ## 📦 Installation
 
 Pour installer le projet, il faut cloner le repository, puis installer les dépendances avec la commande `npm install`. Ensuite, faite `cd my-app` il faut lancer le serveur avec la commande `npm start`.
+
 ## ⚠️ Attention il faut lancer l'API avant de lancer le Front ! ⚠️
+
+Puis créer votre compte et amusez-vous !
 
 ## 🖥️ Technologies
 
